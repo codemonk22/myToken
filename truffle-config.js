@@ -5,7 +5,7 @@
  * them to suit your project as necessary.
  *
  * More information about configuration can be found at:
- * 
+ *
  * https://trufflesuite.com/docs/truffle/reference/configuration
  *
  * To deploy via Infura you'll need a wallet provider (like @truffle/hdwallet-provider)
@@ -19,12 +19,13 @@
  */
 
 // const HDWalletProvider = require('@truffle/hdwallet-provider');
-const HDWalletProvider = require('@truffle/hdwallet-provider');
+const HDWalletProvider = require("@truffle/hdwallet-provider");
 //const infuraKey = "91233201a34743da8340640fa85a9360";
 //const infuraKey = "26dcfb5cbfd9466ca01df39241b4a38d";
 //const mnemonic = "jeans remain arch invest harsh belt inherit history remain aim napkin uniform";
 //const mnemonic = "useless victory tortoise frame beach bicycle ask tell kidney term celery desert"; //Test Network
-const mnemonic = "aspect drip another need decline fat town dream setup boss decide hawk";
+const mnemonic =
+  "aspect drip another need decline fat town dream setup boss decide hawk";
 //
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
@@ -80,15 +81,19 @@ module.exports = {
     development: {
       host: "127.0.0.1",
       port: 9545,
-      network_id: "*" // Match any network id
+      network_id: "*", // Match any network id
     },
     rinkeby: {
-      provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/91233201a34743da8340640fa85a9360`),
+      provider: () =>
+        new HDWalletProvider(
+          mnemonic,
+          `https://rinkeby.infura.io/v3/91233201a34743da8340640fa85a9360`
+        ),
       //provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/91233201a34743da8340640fa85a9360`),
-      network_id: "*",       // rinkeby's id
-      gas: 4500000,        // rinkeby has a lower block limit than mainnet
+      network_id: "*", // rinkeby's id
+      gas: 4500000, // rinkeby has a lower block limit than mainnet
       //gasPrice: 100000000
-      gasPrice: 10000000000
+      gasPrice: 10000000000,
     },
     // ropsten: {
     //   provider: function () {
@@ -105,7 +110,7 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      version: "0.8.13",      // Fetch exact version from solc-bin (default: truffle's version)
+      // Fetch exact version from solc-bin (default: truffle's version)
       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
       // settings: {          // See the solidity docs for advice about optimization and evmVersion
       //  optimizer: {
@@ -114,7 +119,7 @@ module.exports = {
       //  },
       //  evmVersion: "byzantium"
       // }
-    }
+    },
   },
 
   // Truffle DB is currently disabled by default; to enable it, change enabled:
